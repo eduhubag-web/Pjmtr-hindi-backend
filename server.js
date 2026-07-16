@@ -12,7 +12,6 @@ const subscriberRoutes = require('./routes/subscriberRoutes');
 const path = require("path");
 const paymentRoutes = require("./routes/paymentRoutes");
 const reviewerRoutes = require("./routes/reviewerRoutes");
-const editorialRoutes = require("./routes/editorialRoutes");
 const app = express();
 
 app.use("/uploads", express.static("uploads") );
@@ -42,7 +41,7 @@ app.use('/api/news', newsRoutes);
 app.use('/api/papers', paperRoutes);
 
 app.use('/api/admin', adminRoutes);
-app.use("/api/editorial", editorialRoutes);
+
 app.use("/api/payment", paymentRoutes);
 app.use("/api/topbar", topBarRoutes);
 app.use('/api/join', joinRoutes);
